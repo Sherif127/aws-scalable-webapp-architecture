@@ -37,7 +37,7 @@ It is designed with separation between frontend, backend, and database layers, a
 
 - **NAT Gateway** is used to allow EC2 instances in private subnets to access the internet (e.g., for updates or package installs).
 - **Frontend and Backend servers** are deployed in separate **Auto Scaling Groups** in different Availability Zones for fault tolerance.
-- **Application ports are customizable**, and in this deployment, we’re using port **8080** instead of the default 5000.
+- **Application ports are customizable**, and in this deployment, we’re using port **8080**.
 - **Bastion Host** is deployed in a public subnet to enable SSH access to internal resources.
 - **RDS Read Replica** ensures better performance for read-heavy operations and helps offload the primary DB.
 
