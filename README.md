@@ -10,7 +10,7 @@
 
 ---
 
-## 🔍 High-level Overview
+## High-level Overview
 
 ![Architecture](https://github.com/user-attachments/assets/684c65be-37e9-4f91-9fe2-ec92589f3373)
 
@@ -19,7 +19,7 @@ It is designed with separation between frontend, backend, and database layers, a
 
 ---
 
-## 🧰 Key AWS Services Used
+## Key AWS Services Used
 
 - **EC2:** For hosting frontend and backend servers (split across private subnets).
 - **Application Load Balancer (ALB):** Distributes traffic between instances on both web and app layers.
@@ -33,7 +33,7 @@ It is designed with separation between frontend, backend, and database layers, a
 
 ---
 
-## 📝 Notes
+## Notes
 
 - **NAT Gateway** is used to allow EC2 instances in private subnets to access the internet (e.g., for updates or package installs).
 - **Frontend and Backend servers** are deployed in separate **Auto Scaling Groups** in different Availability Zones for fault tolerance.
@@ -43,7 +43,7 @@ It is designed with separation between frontend, backend, and database layers, a
 
 ---
 
-## 🔐 IAM Roles
+## IAM Roles
 
 | Component    | IAM Role |
 |--------------|----------|
@@ -53,7 +53,7 @@ It is designed with separation between frontend, backend, and database layers, a
 
 ---
 
-## 🛡️ Security Groups
+## Security Groups
 
 | Component     | Inbound Traffic                                  | Outbound Traffic                                 |
 |---------------|--------------------------------------------------|--------------------------------------------------|
@@ -65,7 +65,7 @@ It is designed with separation between frontend, backend, and database layers, a
 
 ---
 
-## 🔄 Project Flow
+## Project Flow
 
 1. A user accesses the application via a public DNS linked to the Web ALB.
 2. The request enters through the **Internet Gateway** into the **Public Subnet** where the **ALB** resides.
